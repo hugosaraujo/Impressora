@@ -1,9 +1,10 @@
-﻿using Impressora.Modelos;
+﻿using Impressora.Impressora;
 
-Hp impressora1 = new Hp();
-Epson impressora2  = new Epson();
 
-impressora1.Imprimir();
+ImpressoraPadrao impressora = new ImpressoraPadrao("Epson");
+ImpressoraPadrao impressora2 = new ImpressoraPadrao("Hp");
+
 impressora2.Imprimir();
+impressora.Imprimir();
 
 Console.ReadLine();

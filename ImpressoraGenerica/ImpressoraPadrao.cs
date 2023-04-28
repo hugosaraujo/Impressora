@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace Impressora.Impressora
 {
-    public abstract class ImpressoraPadrao
+    public class ImpressoraPadrao
     {
-        public abstract void Imprimir();
+        public string Modelo { get; private set; }
+
+        public ImpressoraPadrao(string modelo)
+        {
+            this.Modelo = modelo;
+        }
+        public void Imprimir()
+        {
+            Console.WriteLine($"Preparando impresora {this.Modelo}");
+            Console.WriteLine("Imprimindo...");
+        }
+        public void Scanear()
+        {
+            Console.WriteLine($"Preparando impresora {this.Modelo}");
+            Console.WriteLine("Scaneando...");
+        }
     }
 }
